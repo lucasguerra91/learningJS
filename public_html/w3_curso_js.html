@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>Que puede hacer JavaScript?</h2>
+        <p id="demo"> JavaScript puede cambiar el contenido de HTML. </p>
+        <button type="button" onclick="document.getElementById('demo').innerHTML = 'Hola JavaScript!'">Click!</button>
+        <button type="button" onclick="document.getElementById('demo').style.fontSize='35px'">Zoom</button>
+        <button type="button" onclick="document.getElementById('demo').style.display='none'">Ocultar</button>
+        <br><br>
+        <p> En este caso, podemos cambiar el src del archivo </p>
+        
+        <button onclick="document.getElementById('mi_imagen').src='imgs/pic_bulbon.gif'">
+               Encender la luz
+        </button>
+        
+        <img id="mi_imagen" src="imgs/pic_bulboff.gif" style="width: 100px">
+        
+        <button onclick="document.getElementById('mi_imagen').src='imgs/pic_bulboff.gif'">
+               Apagar la luz
+        </button>
+        
+        
+    </body>
+</html>
