@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Metodos de escritura</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>innerHTML</h1>
+        <p>
+            Usando innerHTML <br>
+            Para acceder a un elemento HTML, JavaScript puede utilizar document.getElementById(id).<br>
+            El atributo id define a un elemento HTML. La propiedad innerHTML define el contenido  del elemento:<br>
+        </p>
+        <p id="demo"></p>
+        
+        <script>
+            document.getElementById("demo").innerHTML="<strong>Este contenido fue introducido con JS</strong>";
+        </script>
+        <br>
+        <p>
+            Tambien podemos utilizar <strong>document.write()</strong> para introducir contenido: 
+        </p>
+        
+        <script>
+            document.write("Suma de  5 y 4 : "+  (5+4));
+        </script>
+    </body>
+</html>
