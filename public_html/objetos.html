@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objetos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="cabecera">
+            <img src="imgs/owl.jpg" alt="Owl-Dev" height="100" width="100" style="opacity:0.4;filter:alpha(opacity=40); border-radius: 15px;">
+        </div>
+        
+        <aside>
+            <h4>Objetos en JavaScript</h4>
+            <button onclick= "show_car()"> Mostrar </button>
+            <p id="show_car" style="text-align: center;"> </p>
+            
+            <br><br><br><br>
+            
+            <h4>Objetos y metodos</h4>
+            <p>En este ejemplo declaramos un metodo dentro de los atributos de la persona, que nos muestra el nombre + el apellido</p>
+            <button onclick="mostrar_persona()"> Mostrar persona</button>
+            <p id="show_persona"></p>
+            
+            
+        </aside>
+        
+        <script>
+            var car = {
+                type: "Fiat",
+                model: "500",
+                color: "white"
+            };
+            
+            function show_car(){
+                document.getElementById('show_car').innerHTML='Marca: ' + car.type + '<br>Model: ' + car.model + '<br>Color: ' + car.color ;
+            }
+            
+            function mostrar_persona(){
+                var persona = {
+                    nombre : prompt("Ingrese su nombre: "),
+                    apellido : prompt("Ingrese su apellido: "),
+                    id : prompt("Ingrese su identificador: "),
+                    nombre_completo : function (){
+                            return this.nombre + " " + this.apellido;
+                            }
+                };
+                document.getElementById("show_persona").innerHTML = 'Nombre completo: ' + persona.nombre_completo() + '<br>ID: '+ persona.id;
+                
+            }
+            
+        </script>
+        
+    </body>
+</html>
