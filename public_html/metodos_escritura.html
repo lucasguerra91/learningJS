@@ -15,7 +15,8 @@
         <p id="demo"></p>
         
         <script>
-            document.getElementById("demo").innerHTML="<strong>Este contenido fue introducido con JS</strong>";
+            document.getElementById("demo").innerHTML=
+                    "<strong>Este contenido fue introducido con JS</strong>";
         </script>
         <br>
         <p>
@@ -25,5 +26,21 @@
         <script>
             document.write("Suma de  5 y 4 : "+  (5+4));
         </script>
+        
+        <p>
+            Otra alternativa es  <strong>window.alert()</strong> para mostrar una alerta emergente: 
+        </p>
+        
+        <button onclick="window.alert(5 + 6); console.log('Se presiono el boton Probar alerta')">Probar alerta</button>
+        
+        <p>
+            Una alternativa para mostrar mensajes por consola, que podran ser visualizados con la opcion F12<br>
+            consiste en la funcion <strong>console.log </strong>, esta herramienta tranquilamente puede utilizarse <br>
+            para generar logs del uso de la pagina para recopilar informacion.
+        </p>    
+        
+        <button onclick="console.log('Se presiono el boton LOG')">LOG</button>
+    
+    
     </body>
 </html>

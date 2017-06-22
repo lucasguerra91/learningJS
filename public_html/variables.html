@@ -4,7 +4,7 @@
         <title>Variables</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/micss.css" rel="stylesheet">
+        
         <img src="imgs/owl.jpg" alt="Owl-Dev" height="100" width="100" style="opacity:0.4;filter:alpha(opacity=40); border-radius: 15px;">
         <script>
                 var $nombre = 'Lucas';
@@ -17,32 +17,93 @@
                 precioUnidad = 5;
                 cantidad = 100;
                 total = precioUnidad * cantidad;
-                alert('El total es: ' + total + ' $ .');
+                //alert('El total es: ' + total + ' $ .');
                 
         </script>
     </head>
     <body>
-        <div>
-            <h1>Variables en JavaScript</h1>
-            <br>
-            <h4>Declaracion de variables </h4>
-            <p>
-                1| var $nombre = 'Lucas'; <br>
-                2| console.log($nombre);  <br>
-                3| var $nombre2; <br>
-                4| $nombre2 = 'Gabriel';<br>
-                5| console.log($nombre2);<br>
-            </p>
-            <p> Podemos declararlas y asignarles un valor inicial en la misma linea</p>
-            <br>
-            <h4>Ejemplo de operaciones matematicas</h4>
-            <p>
-                1| var precioUnidad, cantidad, total; <br>
-                2| precioUnidad = 5;<br>
-                3| cantidad = 100;<br>
-                4| total = precioUnidad * cantidad;<br>
-                5| alert('El total es: ' + total + ' $ .');<br>
-            </p>
-        </div>
+        
+        <h1>Variables en JavaScript</h1>
+        <br>
+        <h4>Declaracion de variables </h4>
+        <p>
+            1| var $nombre = 'Lucas'; <br>
+            2| console.log($nombre);  <br>
+            3| var $nombre2; <br>
+            4| $nombre2 = 'Gabriel';<br>
+            5| console.log($nombre2);<br>
+        </p>
+        <p> Podemos declararlas y asignarles un valor inicial en la misma linea</p>
+        <br>
+        <h4>Ejemplo de operaciones matematicas</h4>
+        <p>
+            1| var precioUnidad, cantidad, total; <br>
+            2| precioUnidad = 5;<br>
+            3| cantidad = 100;<br>
+            4| total = precioUnidad * cantidad;<br>
+            5| alert('El total es: ' + total + ' $ .');<br>
+        </p>
+
+        <p> Imprimiendo el valor de la variable carName en pantalla </p>
+        <p id="demo"></p>
+        <script>
+            var carName = "Volvo";
+            document.getElementById("demo").innerHTML = carName;
+        </script>
+        
+        
+        <br><br>
+        <h4> Objetos en JavaScript </h4>
+        <p>
+            Se declaran utilizando {} como en el ejemplo: <br>
+            var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"}; <br>
+        </p>
+        <p id="persona"></p>
+        <button onclick="document.getElementById('persona').innerHTML=
+                persona.nombre + persona.apellido + ' tiene ' + persona.edad + ' años. '; console.log('Se imprimieron datos de la persona')">Mostrar detalles</button>
+        <script>
+            var persona = {
+                nombre : "Lucas",
+                apellido : "Guerra",
+                edad :  "25",
+                ojos: "marrones"
+            };
+            var car = "";
+            console.log(typeof [1,2,3,4]);
+            console.log(typeof car);
+            /*
+             *  typeof undefined           // undefined
+                typeof null                // object
+                null === undefined         // false
+                null == undefined          // true
+             */
+        </script>
+        
+        
+        <br><br>
+        <h4>Funciones en JavaScript</h4>
+        <p>
+            Las funciones en este lenguaje son basicamente como en todos los demas: <br>
+            &nbsp function nombre_funcion (parametro1, parametrox){ <br>
+                 &nbsp &nbsp &nbsp &nbsp  codigo a ejecutar .. <br>
+                   &nbsp; &nbsp; &nbsp; &nbsp; return valor_que_retorna <br>
+                   &nbsp;}<br>
+        </p>
+        <button onclick="multiplica()">Multiplicar dos numeros </button>
+        <p id="resultado">  </p>
+        
+        <script>
+            function multiplica(){
+                var x = prompt("Ingrese el primer numero: ");
+                var y = prompt("Ingrese el segundo numero: ");
+                var mult = x*y;
+                console.log("Se multiplicaron los valores: " + x + " y " + y);
+                console.log("El resultado fue: " + mult)
+                alert("El resultado de la multiplicacion es : " + mult);
+                document.getElementById("resultado").innerHTML= "El ultimo resultado es : " + mult ; 
+            }
+        </script>
+        
+        
     </body>
 </html>
