@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Strings en JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="cabecera">
+            <img src="imgs/owl.jpg" alt="Owl-Dev" height="100" width="100" style="opacity:0.4;filter:alpha(opacity=40); border-radius: 15px;">
+        </div>
+        
+        <aside>
+            <h2>Metodos de Strings en JS</h2>
+            <p>El metodo <strong>indexOf()</strong> retorna la posicion de la primera ocurrencia del argumento</p>
+            <p id="demo"></p>
+            <br>
+            <p> Mientras que el metodo <strong>lastIndexOf()</strong> muestra la ultima aparicon del parametro que le pasemos </p>
+            <p id="demo2"></p>
+            <br>
+            <p>Podemos agregar un segundo parametro a <strong>indexOf('parametro',indice)</strong> para indicar la poscicion en la que deberia comenzar la busqueda.</p>
+            <p id="demo3"></p>
+            <br>
+            
+            <script>
+                var str = "Por favor encuentra la palabra 'encuentra'";
+                var pos = str.indexOf("encuentra");
+                var pos2 = str.indexOf("encuentra",33);
+                var last = str.lastIndexOf("encuentra");
+                document.getElementById("demo").innerHTML = pos;
+                document.getElementById("demo2").innerHTML = last;
+                document.getElementById("demo3").innerHTML = pos2;
+            </script>
+        </aside>
+    </body>
+</html>
