@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Condicionales en JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="cabecera">
+            <img src="imgs/owl.jpg" alt="Owl-Dev" height="100" width="100" style="opacity:0.4;filter:alpha(opacity=40); border-radius: 15px;">
+        </div>
+        
+        <h2>Ejemplo de uso de Switch </h2>
+        <code>
+            var day;<br>
+            switch(new Date().getDay()){<br>
+                case 0:<br>
+                    day = "Domingo";<br>
+                    break;<br>
+                case 1:<br>
+                    day = "Lunes";<br>
+                    break;<br>
+                case 2:<br>
+                    day = "Martes";<br>
+                    break;<br>
+                case 3:<br>
+                    day = "Miercoles";<br>
+                    break;<br>
+                case 4:<br>
+                    day = "Jueves";<br>
+                    break;<br>
+                case 5: <br>
+                    day = "Viernes";<br>
+                    break;<br>
+                case 6: <br>
+                    day = "Sabado";<br>
+                    break;
+        </code>
+        <p>Al igual que en otros lenguajes, tambien podemos usar default para manejar las excepciones</p>
+        <p id="demo_switch"></p>
+        <br>
+        
+        <script>
+            var day;
+            switch(new Date().getDay()){
+                case 0:
+                    day = "Domingo";
+                    break;
+                case 1:
+                    day = "Lunes";
+                    break;
+                case 2:
+                    day = "Martes";
+                    break;
+                case 3:
+                    day = "Miercoles";
+                    break;
+                case 4:
+                    day = "Jueves";
+                    break;
+                case 5: 
+                    day = "Viernes";
+                    break;
+                case 6: 
+                    day = "Sabado";
+                    break;
+                   
+            }
+            document.getElementById("demo_switch").innerHTML= "Hoy es " + day;
+        </script>
+        
+    </body>
+</html>
