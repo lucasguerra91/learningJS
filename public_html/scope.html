@@ -18,10 +18,38 @@
             <p id="demo"></p>
 
             <script>
+               
                 var carName = "Volvo";
                 // code here can use window.carName
                 document.getElementById("demo").innerHTML = "I can display " + window.carName;
             </script>
+            
+            
+            <p>
+                <br>
+                If you assign a value to a variable that has not been declared,
+                it will automatically become a Global variable:
+                <br>
+                Si se asigna un valor a una variable que no ha sido declarada, 
+                esta automaticamente se convierte en una variable global
+            </p>
+            
+            <p id="demo2"></p>
+            
+            <script>
+                myFunction();
+                
+                // Code here can use carName as a global variable
+                document.getElementById("demo2").innerHTML = "Puedo mostrar " + carName;
+                
+                
+                function myFunction(){
+                    carName = "Toyota";
+                }
+            </script>
+            
+            
+            
             
         </aside>
         
