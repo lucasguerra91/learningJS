@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        
+        <h1>Using String Methods</h1>
+        <p>
+            In JavaScript, regular expressions are often used with the two string methods: search() and replace().</br>
+            <b>The search()</b> method uses an expression to search for a match, and returns the position of the match.</br>
+            <b>The replace()</b> method returns a modified string where the pattern is replaced.</br>
+        </p>
+        
+        <h2>Ejemplos</h2>
+        
+        <p>Buscando la palabra "w3Schools", y mostrando la posicion de inicio</p>
+        <button onclick="myFunction()"> Pruebalo</button>
+        <p id="demo">   </p> </br>
+        
+        
+        <p> Utilizando search() para buscar.</br> En este caso, la cadena se convierte a una expresion regular para hacer la busqueda.</p>
+        <button onclick="myFunction2()"> Pruebalo</button>
+        <p id="demo2">   </p> </br>
+        
+        
+        <p> Utilizando replace() para buscar y reemplazar.</br> Se busca la cadena y se reemplaza por la que especifiquemos</p>
+        <button onclick="myFunction3()"> Pruebalo</button>
+        <p id="demo3">   </p> </br>
+        
+        
+        
+        
+        <!-- Funciones -->
+
+        <script>
+            function myFunction(){
+                var str = "Visita w3Schools!";
+                var n = str.search(/w3Schools/i);
+                document.getElementById("demo").innerHTML = n;   
+            }
+            
+            
+            function myFunction2(){
+                var str = "Visita w3Schools!";
+                var n = str.search("w3Schools");
+                document.getElementById("demo2").innerHTML = n;    
+            }
+            
+            function myFunction3(){
+                var str = "Visita w3Schools!";
+                var n = str.replace("w3Schools", "Owl Dev");
+                document.getElementById("demo3").innerHTML = n;    
+            }
+        </script>
+    
+    
+    </body>
+</html>

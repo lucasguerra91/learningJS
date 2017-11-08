@@ -7,8 +7,6 @@
         <script>
             var articulos =["Zapatillas", "Camiseta", "Pantalon", "Medias"];
             //var articulos = new Array("Zapatillas", "Camiseta", "Pantalon", "Medias");
-            
-
         </script>
     </head>
 
@@ -25,6 +23,8 @@
                     <script>
                         document.write("<p> El primer articulo es: <Strong>" + articulos[0] + "</strong>. </p>" );
                         document.write("<p> El ultimo elemento es: <strong>" + articulos[articulos.length-1]+" </strong>. </p>");
+                        articulos.unshift("Balon");
+                        document.write("<p> El primer articulo es: <Strong>" + articulos[0] + "</strong>. </p>" );
                     </script>
                 </div>
             </div>

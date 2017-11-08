@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <!-- Pulsando el boton de que hora es , se nos muestra la hora debajo -->
+        <button onclick="document.getElementById('demo').innerHTML=Date()">The time is </button>
+        <p id="demo"></p>
+        
+        <!-- En este caso, se cambia el contenido del propio elemento -->
+        <button onclick="this.innerHTML = Date()">The time is?</button>
+            
+        <!-- Por lo general , se utilizan funciones -->
+        <p>Presione el boton para visualizar la hora actual</p>
+        
+        <button onclick="displayDate()">
+            La hora es?
+        </button>
+        
+        <script> 
+            function displayDate(){
+                document.getElementById("demo2").innerHTML = Date();
+            }
+        </script>
+        
+        <p id="demo2">  </p>
+        
+        
+    </body>
+</html>

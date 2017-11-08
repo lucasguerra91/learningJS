@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Debugging</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>Debbuging en JavaScript</h1>
+        <p>El metodo <b>console.log()</b></p>
+        </br>
+        <p>Si tu navegador lo soporta, podes utilizar cnosole.log() para visualizar los mensajes en la ventana de Debbug</p>
+        </br>
+        <h2>Utilizando Breakpoints</h2>
+        <p>
+            In the debugger window, you can set breakpoints in the JavaScript code.</br>
+            At each breakpoint, JavaScript will stop executing, and let you examine JavaScript values.</br>
+            After examining values, you can resume the execution of code (typically with a play button).</br>
+        </p>
+        
+        <p id="demo"></p>
+        <p>With the debugger turned on, the code below should stop executing before it executes the third line.</p>
+
+        <script>
+            a = 5;
+            b= 6;
+            c = a + b ;
+            console.log(c);
+            
+            var x = 15*5;
+            debugger;
+            document.getElementById("demo").innerHTML = x;
+            
+        </script>
+    </body>
+</html>

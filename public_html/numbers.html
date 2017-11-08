@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Numeros</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h2>Suma de dos enteros</h2>
+        <p id="demo"></p>
+        <br>
+        <h2>Suma de dos cadenas </h2>
+        <p id="demo2"></p>
+        <br>
+        <h2>Not a number</h2>
+        <p>Si dividimos un numero por una cadena obtenemos un NaN</p>
+        <p id="nan"></p>
+        <br>
+        <h2>Infinito</h2>
+        <p>Infinity es el valor que devuelve JS si calculas un numero que se encuentre fuera de la longitud permitida</p>
+        <p id="infinito"></p>
+        
+        <!-- Numeros y operaciones  -->
+        <script>
+            //El operador + sirve tanto para suma como para concatenacion
+            var x = 10;
+            var y = 20;
+            var z = x + y;
+            document.getElementById("demo").innerHTML = "El resultado es: " + z;
+            // Concatenando      
+            var a = "10";
+            var b = "13";
+            var c = a + b ;
+            document.getElementById("demo2").innerHTML = "El resultado es: " + c;
+            
+            //NaN - Not a number
+            document.getElementById("nan").innerHTML = 100  /"Apple";
+            
+            // Infinito
+            var myNumber = 2 ;
+            var txt = "";
+            while (myNumber != Infinity){
+                myNumber = myNumber + myNumber;
+                txt = txt + myNumber + "<br>";
+            }
+            document.getElementById("infinito").innerHTML = txt;
+        </script>
+    </body>
+</html>

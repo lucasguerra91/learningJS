@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Hoisting</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1>JavaScript Hoisting</h1>
+        <p>
+            En JS una variable puede ser declarado luego de ser utilizada.
+        </p>
+        <p id="demo1"> </p>
+        <p id="demo2"> </p>
+        
+        
+        <script>
+            x = 5; // Se asigna 5 a x
+            elemento = document.getElementById("demo1");
+            elemento.innerHTML = x; // se muestra
+            var x ; // opr ultimo se declara
+            
+            
+            var y ; // se declara la variable
+            y = 4 ; // se le asigna el valor
+            document.getElementById("demo2").innerHTML = y ;
+            
+        </script>
+    </body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Errores</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <p id="demo"></p>
+        
+        
+        <p>La sentencia <b>throw</b> te permite crear un mensaje de error personalizado</p>
+        <h2>Validacion de entrada </h2>
+        <input id="demo2" type="text">
+        <button type="button" onclick="myFunction()"> Test input</button>
+        <p id="message"></p>
+        </br>
+        </br>
+        <p>La sentencia <b>finally</b> te permite ejecutar codigo luedo del try cath</p>
+        <h2>Validacion de entrada </h2>
+        <input id="demo3" type="text">
+        <button type="button" onclick="myFunction2()"> Test input</button>
+        <p id="message2"></p>
+        
+        <script>
+            try {
+                adddlert("Bienvenido Invitado");
+            }
+            catch(err){
+                document.getElementById("demo").innerHTML= err.message;
+            }
+            
+            function myFunction(){
+                var message, x ;
+                message = document.getElementById("message");
+                message.innerHTML= "";
+                x = document.getElementById("demo2").value;
+                try{
+                    if(x == "") throw "vacio";
+                    if(isNaN(x)) throw "no es un numero";
+                    x = Number(x);
+                    if(x < 5) throw "demasiado bajo";
+                    if(x > 10) throw "demasiado alto";
+                }
+                catch(err){
+                    message.innerHTML = "La entrada es " + err ;
+                }
+                
+            }
+            
+            function myFunction2() {
+                var message, x;
+                message = document.getElementById("message2");
+                message.innerHTML = "";
+                x = document.getElementById("demo3").value;
+                try { 
+                    if(x == "") throw "is empty";
+                    if(isNaN(x)) throw "is not a number";
+                    x = Number(x);
+                    if(x > 10) throw "is too high";
+                    if(x < 5) throw "is too low";
+                }
+                catch(err) {
+                    message.innerHTML = "Error: " + err + ".";
+                }
+                finally {
+                    document.getElementById("demo3").value = "";
+                }
+            }
+            
+        </script>
+    </body>
+</html>
