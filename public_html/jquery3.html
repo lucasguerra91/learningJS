@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+        <style>
+            .contendor{
+                background-color: #000;
+                color: #0F0;
+            }
+        </style>
+        
+        <script>
+            $(document).ready(function(){
+                // alert($("#errores h2 strong").html());
+                //$("#errores").html("<p> Cambiando el texto con Jquery </p>");
+                //$("#errores h2").text("Cambiando el texto con Jquery "); No reconoce los tags HTML, se debe indicar en el selector
+                $("#errores").append("<p> Agregando texto con Jquery adelante </p>");
+                $("#errores").prepend("<p> Agregando texto con Jquery detras </p>");
+                $("#errores").before("<p> Agregando texto con Jquery antes del contenedor seleccionado </p>");
+                $("#errores").after("<p> Agregando texto con Jquery despues del contenedor seleccionado </p>");
+            });
+        </script>
+        
+    </head>
+    
+    
+    <body>
+        <div id="errores" class="contendor">
+            <h2>Errores <strong> gil </strong></h2>
+        </div>
+        
+        <form action="" method="get">
+            <input name="" type="text"> </br>
+            <input name="" type="text"> </br>
+            <input name="" type="text"> </br>
+            
+        </form>
+        
+    </body>
+</html>
