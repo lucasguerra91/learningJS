@@ -23,6 +23,16 @@
                 $("#errores").before("<p> Agregando texto con Jquery antes del contenedor seleccionado </p>");
                 $("#errores").after("<p> Agregando texto con Jquery despues del contenedor seleccionado </p>");
             });
+            
+            function validar(){
+                var n_usuario = document.getElementById("usuario").value ;
+                var nombre = document.getElementById("nombre").value ;
+                var apellido = document.getElementById("apellido").value ;
+                
+                if(n_usuario == ""){
+                    $("#usuario").after(" * Debe completar este campo.");
+                }
+            }
         </script>
         
     </head>
@@ -34,9 +44,11 @@
         </div>
         
         <form action="" method="get">
-            <input name="" type="text"> </br>
-            <input name="" type="text"> </br>
-            <input name="" type="text"> </br>
+            <input name="" type="text" id="usuario"> </br>
+            <input name="" type="text" id="nombre"> </br>
+            <input name="" type="text" id="apellido"> </br>
+            
+            <input type="button" value="Go" onclick="validar()">
             
         </form>
         

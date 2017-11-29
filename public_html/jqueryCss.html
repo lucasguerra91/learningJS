@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Css en JQuery</title>
+        <style>
+            .linkdestacacursos{
+                    /*background-color:#F00;*/
+                    color : #F00;
+                    font-weight: bold;
+                    margin-left: 25px;
+            }
+            
+            .linkdestacaejemplos{
+                color : #334873;
+                font-weight: bold;
+                margin-left: 25px;
+            }
+
+            a{
+                    display:block;
+                    margin-bottom:20px;
+                    font-size:24px;
+            }
+            table{
+                    text-align:center;
+                    border:none;
+            }
+
+            td{
+                    border:none;
+            }
+
+            #contieneEnlaces {
+                    position: absolute;
+                    left: 31px;
+                    top: 65px;
+                    width: 400px;
+                    height: 649px;
+                    z-index: 1;
+                    padding-top:100px;
+            }
+        </style>
+
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+                // $("a[href^='https://']").addClass("linkdestacacursos");
+                document.getElementById("cursos").addEventListener("click",resaltaCursos,false);
+                document.getElementById("informacion").addEventListener("click",resaltaEjemplos,false);
+            });
+            
+            function resaltaCursos(){
+                /*$(".cursos").removeClass("linkdestacacursos");*/
+                $(".cursos").toggleClass("linkdestacacursos");
+            }
+            
+            function resaltaEjemplos(){
+                /*$(".ejemplos").addClass("linkdestacacursos");*/
+                $(".ejemplos").toggleClass("linkdestacaejemplos");
+            }
+            
+        </script>
+        
+    </head>
+
+    <body>
+
+    <div id="contieneEnlaces">
+
+        <a href="http://www.owl-dev.com.ar" target="_blank" class="cursos">
+        Owl Dev
+        </a><br>
+
+        <a href="http://www.google.com" target="_blank" class="ejemplos">
+        Google
+        </a><br>
+
+        <a href="jquery4.html" target="_blank" >
+        Remover y reemplazar
+        </a><br>
+
+        <a href="https://news.google.es/" target="_blank" class="ejemplos">
+        Noticias google
+        </a><br>
+
+        <a href="calculadora_eventos.html" target="_blank" class="cursos">
+        Calculadora
+        </a>
+    </div>
+
+    <table width="100%" border="1">
+        <tr>
+            <td>Cursos destacados&nbsp;&nbsp;<input type="checkbox"  value="Cursos" id="cursos"></td>
+        <td>Información adicional&nbsp;&nbsp;<input type="checkbox"  value="Información" id="informacion"></td>
+        </tr>
+
+    </body>
+</html>
