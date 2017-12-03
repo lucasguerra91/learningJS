@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Modificando HTML con JQuery</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <script src="Jquery/jquery-1.6.3.min.js"></script>
+        
+        <script>
+            $(document).ready(function(){
+               document.getElementById("img1").addEventListener("mouseover", cambiar , false); 
+               document.getElementById("img1").addEventListener("mouseout", restaurar , false);
+            });
+            
+            function cambiar(){
+                $("img").attr("src", "imgs/pic_bulbon.gif");
+            }
+            
+            function restaurar(){
+                $("img").attr("src", "imgs/pic_bulboff.gif");
+            }
+            
+        </script>
+    </head>
+    
+    <body>
+        <img src="imgs/pic_bulboff.gif" id="img1">
+    </body>
+    
+</html>
